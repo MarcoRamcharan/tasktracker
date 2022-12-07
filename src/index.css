@@ -1,0 +1,418 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Oswald', sans-serif;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.active{
+  color: blue;
+}
+
+.link{
+  color: white;
+}
+
+
+
+.navbar{
+  height: 10vh;
+  background-color: #513439;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+
+.navbar select{
+  outline: none;
+  border: none;
+  height: 42px;
+  width: 120px;
+  background-color: dodgerblue;
+  color: white;
+}
+
+
+.links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links a{
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+}
+
+
+
+.taskHome{
+  height: 90vh;
+  width: 100%;
+  position: relative;
+}
+
+
+.taskHome .tasklists{
+  height: 80vh;
+  padding-bottom: 95px;
+  overflow-y: scroll;
+}
+
+.tasklistview{
+  height: 90vh;
+  background-color: aqua;
+}
+
+
+
+
+.tasklistsPage{
+  width: 100%;
+  background-color: aqua;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding-bottom: 50px;
+}
+
+
+.tasklist-view{
+  background-color: white;
+  margin: 23px;
+  border-radius: 60px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+}
+
+.tasklist-view .right{
+  display: flex;
+}
+
+.tasklist-view .right h2{
+  margin: 15px;
+}
+
+
+
+
+.tasklistview-heading{
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  border-bottom-left-radius: 10% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.task{
+  background-color: whitesmoke;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 4%;
+  width: 60%;
+}
+
+
+
+
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: aqua;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkslategray;
+  max-height: 200px;
+  border-radius: 20px;
+}
+
+.fa-solid .fa-circle-check{
+  height: 30px;
+}
+
+
+
+.addQuickTask{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  position: absolute;
+  bottom:10px;
+  left: 38%;
+}
+
+.addTaskLink{
+  position: absolute;
+  bottom: 150px;
+  right: 20px;
+}
+
+.addTaskLink a:hover{
+  color: blue;
+}
+
+.addTaskLink a:hover .addtask-text{
+  display: inline-block;
+}
+
+.addTaskLink a{
+  text-decoration: none;
+  color: slateblue;
+  font-size: 65px;
+  padding: 10px 20px;
+  transition: all 1s;
+}
+
+
+.addQuickTask .input-group{
+  display: flex;
+  align-items: center;
+}
+
+.addQuickTask input{
+  margin: 10px;
+  outline: none;
+  border: none;
+  border-radius: 200px;
+  background-color: black;
+  padding: 10px;
+  width: 95%;
+  color: white;
+}
+
+.addQuickTask h1{
+  cursor: pointer;
+  width: 5%;
+  color: blue;
+}
+
+.addQuickTask h3{
+  text-align: center;
+}
+
+
+.addtask-text{
+  color: green;
+  font-size: 25px;
+  margin: 10px;
+  transition: all 1s;
+}
+
+
+
+.addTaskList{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  position: absolute;
+  bottom:10px;
+  left: 34%;
+}
+
+.addTaskList .input-group{
+  display: flex;
+  align-items: center;
+}
+
+.addTaskList input{
+  margin: 10px;
+  outline: none;
+  border: none;
+  border-radius: 200px;
+  background-color: black;
+  padding: 10px;
+  width: 95%;
+  color: white;
+}
+
+.addTaskList h1{
+  cursor: pointer;
+  width: 5%;
+  color: blue;
+}
+
+.addTaskList h3{
+  text-align: center;
+}
+
+
+
+
+/* add task page */
+
+.addTask{
+  height: 90vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.addTask h1{
+  color: white;
+}
+
+.addTask .input-group{
+  background-color: dodgerblue;
+  margin: 10px;
+  width: 350px;
+  display: flex;
+  height: 40px;
+}
+
+.addTask .input-group input{
+  width: 75%;
+  outline: none;
+  border: none;
+}
+
+.addTask .input-group select{
+  width: 75%;
+  outline: none;
+  border: none;
+}
+
+.addTask .input-group label{
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  color: white;
+}
+
+.addTask .input-group button{
+  width: 100%;
+  outline: none;
+  background-color: green;
+  color: white;
+  border: none;
+}
+
+.addTask .message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+}
+
+.show{
+  display: none;
+}
+
+/* end of add task page */
+
+
+
+/* add batch mode */
+
+.addBatch{
+  background-color: dodgerblue;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addBatch-form{
+  background-color: dodgerblue;
+}
+
+.addBatch-form h1{
+  text-align: center;
+  margin: 20px;
+}
+
+.addBatch .txtarea{
+  display: flex;
+  margin: 10px;
+}
+
+.addBatch .input-group{
+  display: flex;
+  background-color: darkolivegreen;
+  margin: 10px;
+  height: 45px;
+}
+
+.addBatch textarea{
+  outline: none;
+  border: none;
+}
+
+
+.addBatch .input-group input{
+  width: 75%;
+  outline: none;
+  border: none;
+}
+
+.addBatch .input-group select{
+  width: 75%;
+  outline: none;
+  border: none;
+}
+
+.addBatch .input-group label{
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  color: white;
+}
+
+.addBatch .input-group button{
+  width: 100%;
+  outline: none;
+  background-color: green;
+  color: white;
+  border: none;
+}
+
+.addBatch .message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+}
+
+
+/* end of batch mode*/
+
+
+
